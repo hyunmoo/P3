@@ -41,12 +41,6 @@ $(document).ready(function(){
 	    var y = event.accelerationIncludingGravity.y;
 	    var z = event.accelerationIncludingGravity.z;
 		
-
-
-		$("#xVal").html(x);
-		$("#yVal").html(y);
-		$("#zVal").html(z);
-
 		var maxX = window.innerWidth - $("#ball").width();
 		var maxY = window.innerHeight - $("#ball").height();
 
@@ -76,7 +70,11 @@ $(document).ready(function(){
 		newY = Math.min(maxY, newY);
 
 		$("#ball").css("top", Math.round(newY));
-		$("#tVal").html(newX, newY);
+		
+		$("#xVal").html(newX);
+		$("#yVal").html(newY);
+		$("#zVal").html(z);
+
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
