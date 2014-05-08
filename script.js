@@ -14,17 +14,7 @@ $(document).ready(function(){
 	var count1 = 0;
 	var a = 0;
 	var gradient = function(number2){
-		
-		
-		if(count1 = 0){
-			temp_g = Number(number2);
-			count1++;
-		}
-		
-		if(Number(number2) != temp_g){
-			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
-			count = 0;
-		}
+		$('#im').css({"-webkit-transform": "rotate("+Number(number2)*10+"deg)"});
 	}
 	 
 	
@@ -51,6 +41,7 @@ $(document).ready(function(){
 	    var z = event.accelerationIncludingGravity.z;
 		
 		$("#xVal").html(Math.round(x));
+		gradient(Math.round(x));
 		$("#yVal").html(y);
 		$("#zVal").html(z);		
 		
