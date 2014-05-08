@@ -9,10 +9,11 @@ $(document).ready(function(){
 		if(count === 0){
 			temp_x = Math.abs(Number(number1));
 			count1++;
+			count++;
 			$("#tVal").html(temp_x);
 			$("#cVal").html("Lose!" + count1);
 		}else {
-			if( temp_x < Math.abs(Number(number1)) ){
+			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
 				$("#aVal").html("Win!" + count1);
 				count = 0;
