@@ -9,27 +9,27 @@ $(document).ready(function(){
 	});
 	
 	var temp_x = 0;
-	var temp_g = 0;
 	var count = 0;
-	var count1 = 0;
-	var a = 0;
+
 	var gradient = function(number2){
 		$('#im').css({"-webkit-transform": "rotate("+Number(number2)*10+"deg)"});
 	}
 	 
 	
 	var check = function (number1){
+		
 		if(count === 0){
 			temp_x = Math.abs(Number(number1));
 			count++;		
 			
 		}else if(count === 1){
+			
 			if( temp_x != Math.abs(Number(number1)) ){
 				//document.getElementById("ssound").play();
 				count++;
 				setTimeout(function(){count = 0;$("#ssound")[0].load();$("#ssound")[0].play();},1100);
-				
 			}
+			
 		}
 
 	}
