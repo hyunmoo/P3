@@ -21,7 +21,7 @@ $(document).ready(function(){
 			
 			$("#cVal").html("Lose!" + count1);
 			a++;
-			// $("#m0").rotate(a);
+			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
 		}else if(count === 1){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
@@ -78,27 +78,6 @@ $(document).ready(function(){
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-
-	/*
-	function check(){
-		if(count === 0){
-			temp_x = Math.abs(Number(newX));
-			count++;
-			$("#tVal").html(temp_x);
-		}else if(count === 1){
-			
-			if(temp_x != Math.abs(Number(newX))){
-				$("#sound")[0].play();
-				count = 0;
-			}
-			$("#aVal").html(count1);
-			
-		}
-		
-		
-	}
-	
-	*/
 
 	//$("#ball").css("left", 30);
 	//$("#ball").css("top", 30);
