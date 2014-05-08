@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
-	int a = 0;
+	var a = 0;
 	var gradient = function(number2){
 		
 	}
@@ -19,7 +19,7 @@ $(document).ready(function(){
 			$("#tVal").html(temp_x);
 			$("#cVal").html("Lose!" + count1);
 			a++;
-			$("m0").css({"-webkit-transform":"rotate("+a+"deg)"});
+			//$("m0").css({"-webkit-transform":"rotate("+a+"deg)"});
 		}else if(count === 1){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
