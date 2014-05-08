@@ -4,6 +4,7 @@ $(document).ready(function(){
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
+	var count1 = 0;
 	var maxX;
 	var maxY;
 
@@ -61,7 +62,8 @@ $(document).ready(function(){
 		
 		if(count === 1){
 			count = 0;
-			$("#cVal").html(count);
+			count1++;
+			$("#cVal").html(count1);
 		}
 		
 	}
