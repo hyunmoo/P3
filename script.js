@@ -5,7 +5,9 @@ $(document).ready(function(){
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
-	var check = function (number){
+	var check = function (number1){
+		temp_x = Math.abs(Number(number1));
+		$("#tVal").html(temp_x);
 	}
 
 	function handleMotionEvent(event) {
@@ -34,6 +36,7 @@ $(document).ready(function(){
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
 		//$("#tVal").html(Math.abs(Number(newX)));
+		check(Number(newX));
 
 		$("#ball").css("left", Math.round(newX));
 
