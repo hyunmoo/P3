@@ -15,3 +15,12 @@ html, body {
 	background-color: red;
 	border-radius: 25px;
 }
+
+#m0{
+	position: absolute;
+	top : 20%;
+	left: 20%;
+	-ms-transform:rotate(30deg); /* IE 9 */
+	-webkit-transform:rotate(30deg); /* Chrome, Safari, Opera */
+	transform:rotate(30deg); /* Standard syntax */
+}
