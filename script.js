@@ -54,6 +54,8 @@ $(document).ready(function(){
 		if(count === 0){
 			temp_x = abs(newX);
 			count++;
+			$("#tVal").html(temp_x);
+			$("#cVal").html(count);
 		}
 		
 		if(count === 1){
