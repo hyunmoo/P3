@@ -5,8 +5,8 @@ $(document).ready(function(){
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
-	var maxX;
-	var maxY;
+	var newX;
+	var newY;
 
 	function handleMotionEvent(event) {
 
@@ -20,8 +20,8 @@ $(document).ready(function(){
 		$("#yVal").html(y);
 		$("#zVal").html(z);
 
-		maxX = window.innerWidth - $("#ball").width();
-		maxY = window.innerHeight - $("#ball").height();
+		var maxX = window.innerWidth - $("#ball").width();
+		var maxY = window.innerHeight - $("#ball").height();
 
 		var factor = 3;
 
