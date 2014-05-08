@@ -27,7 +27,7 @@ $(document).ready(function(){
 			if( temp_x != Math.abs(Number(number1)) ){
 				//document.getElementById("ssound").play();
 				count++;
-				setTimeout(function(){count = 0;},1100);
+				setTimeout(function(){count = 0;$("#ssound")[0].load();$("#ssound")[0].play();},1100);
 				
 			}
 		}
