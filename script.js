@@ -19,7 +19,7 @@ $(document).ready(function(){
 			$("#tVal").html(a);
 			$("#cVal").html("Lose!" + count1);
 			a++;
-			$("m0").css({'-webkit-transform':'rotate('+a+'deg)'});
+			 $("#m0").rotate(a);
 		}else if(count === 1){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
