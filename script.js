@@ -60,7 +60,7 @@ $(document).ready(function(){
 			$("#cVal").html(count);
 		}else if(count === 1){
 			
-			if(temp != Math.abs(Number(newX))){
+			if(temp_x != Math.abs(Number(newX))){
 				$("#sound")[0].play();
 				count = 0;
 			}
