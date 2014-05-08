@@ -50,7 +50,6 @@ $(document).ready(function(){
 	    var y = event.accelerationIncludingGravity.y;
 	    var z = event.accelerationIncludingGravity.z;
 		
-		gradient(x);
 		$("#xVal").html(x);
 		$("#yVal").html(y);
 		$("#zVal").html(z);		
