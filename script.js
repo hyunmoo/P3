@@ -3,6 +3,7 @@ $(document).ready(function(){
 	var sound  = new Audio('sound1.mp3');
 	sound.play();
 	sound.volume = 0.3;
+	sound.loop = true;
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
@@ -34,7 +35,6 @@ $(document).ready(function(){
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
 		//$("#tVal").html(Math.abs(Number(newX)));
-		che(newX);
 
 		$("#ball").css("left", Math.round(newX));
 
@@ -51,10 +51,7 @@ $(document).ready(function(){
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-	function che(num1){
-		//temp_x = Math.abs(Number(num1));
-		$("#tVal").html(num1);
-	}
+
 	/*
 	function check(){
 		if(count === 0){
