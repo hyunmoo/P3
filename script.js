@@ -1,13 +1,12 @@
 $(document).ready(function(){
 	console.log("ready");	
-	var sound  = new Audio('sound1.mp3');
-	sound.play();
-	sound.volume = 0.3;
-	sound.loop = true;
+	$('#sound')[0].play();
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
+	var check = function (number){
+	}
 
 	function handleMotionEvent(event) {
 
