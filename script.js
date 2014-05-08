@@ -54,15 +54,16 @@ $(document).ready(function(){
 	
 	function check(){
 		if(count === 0){
-			//temp_x = abs(newX);
+			temp_x = Math.abs(Number(newX));
 			count++;
 			//$("#tVal").html(temp_x);
 			$("#cVal").html(count);
-		}
-		
-		if(count === 1){
-			count = 0;
-			count1++;
+		}else if(count === 1){
+			
+			if(temp != Math.abs(Number(newX))){
+				$("#sound")[0].play();
+				count = 0;
+			}
 			$("#aVal").html(count1);
 		}
 		
