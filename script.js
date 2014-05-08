@@ -32,7 +32,7 @@ $(document).ready(function(){
 		var newX = orgX + x;
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
-		$("#tVal").html(Math.abs(Number(num)));
+		$("#tVal").html(Math.abs(Number(newX)));
 
 		$("#ball").css("left", Math.round(newX));
 
