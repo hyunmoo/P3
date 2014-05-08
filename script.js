@@ -1,6 +1,8 @@
 $(document).ready(function(){
 	console.log("ready");	
-	document.getElementById("ssound").play();
+	$("#ssound")[0].load();
+	$("#ssound")[0].play();
+	//document.getElementById("ssound").play();
 	
 	var temp_x = 0;
 	var temp_y = 0;
@@ -10,6 +12,22 @@ $(document).ready(function(){
 	var gradient = function(number2){
 		if(Number(number2) === 155){
 			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+		}else if(Number(number2) < 155){
+			a--;
+			if(a < -45){
+				a= -45;
+				$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+			}else{
+				$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+			}
+		}else if(Number(number2) > 155){
+			a++;
+			if(a > 45){
+				a = 45;
+				$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+			}else{
+				$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+			}
 		}
 			
 	}
@@ -26,7 +44,7 @@ $(document).ready(function(){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
 				$("#aVal").html("Win!" + count1);
-				document.getElementById("ssound").play();
+				//document.getElementById("ssound").play();
 				count++;
 				setTimeout(function(){count = 0;},1100);
 				
