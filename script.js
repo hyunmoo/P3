@@ -1,10 +1,11 @@
 $(document).ready(function(){
 	console.log("ready");	
-	$('#sound')[0].play();
+	var so = document.getElementById("ssound");
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
+	
 	var check = function (number1){
 		if(count === 0){
 			temp_x = Math.abs(Number(number1));
@@ -16,7 +17,10 @@ $(document).ready(function(){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
 				$("#aVal").html("Win!" + count1);
-				count = 0;
+				document.getElementById("ssound").play();
+				count++;
+				setTimeout(function(){count = 0;},1100);
+				
 			}
 		}
 
