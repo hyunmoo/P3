@@ -33,6 +33,7 @@ $(document).ready(function(){
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
 		$("#tVal").html(Math.abs(Number(newX)));
+		check();
 
 		$("#ball").css("left", Math.round(newX));
 
@@ -52,17 +53,15 @@ $(document).ready(function(){
 	
 	function check(){
 		if(count === 0){
-			temp_x = abs(newX);
+			//temp_x = abs(newX);
 			count++;
-			$("#tVal").html(temp_x);
+			//$("#tVal").html(temp_x);
 			$("#cVal").html(count);
 		}
 		
 		if(count === 1){
-			if(temp_x < abs(newX)){
-				$("#sound")[0].play();
-				count = 0;
-			}
+			$("#cVal").html(count);
+			count = 0;
 		}
 		
 	}
