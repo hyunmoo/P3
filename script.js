@@ -7,7 +7,6 @@ $(document).ready(function(){
 	var count = 0;
 	var count1 = 0;
 	var a = 0;
-	$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
 	var gradient = function(number2){
 		if(Number(number2) === 155){
 			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
