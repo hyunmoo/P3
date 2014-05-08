@@ -50,7 +50,7 @@ $(document).ready(function(){
 	    var y = event.accelerationIncludingGravity.y;
 	    var z = event.accelerationIncludingGravity.z;
 		
-		$("#xVal").html(Number(x));
+		$("#xVal").html(Math.round(x));
 		$("#yVal").html(y);
 		$("#zVal").html(z);		
 		
