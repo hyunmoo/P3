@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	console.log("ready");	
 	var so = document.getElementById("ssound");
+	document.getElementById("ssound").play();
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
@@ -13,7 +14,7 @@ $(document).ready(function(){
 			count++;
 			$("#tVal").html(temp_x);
 			$("#cVal").html("Lose!" + count1);
-		}else {
+		}else if(count === 1){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
 				$("#aVal").html("Win!" + count1);
