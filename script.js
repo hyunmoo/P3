@@ -58,7 +58,7 @@ $(document).ready(function(){
 		
 		if(count === 1){
 			if(temp_x < abs(newX)){
-				$("#video")[0].play();
+				$("#sound")[0].play();
 				count = 0;
 			}
 		}
