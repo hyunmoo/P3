@@ -56,15 +56,15 @@ $(document).ready(function(){
 		if(count === 0){
 			temp_x = Math.abs(Number(newX));
 			count++;
-			//$("#tVal").html(temp_x);
-			$("#cVal").html(count);
+			$("#tVal").html(temp_x);
 		}else if(count === 1){
-			
+			/*
 			if(temp_x != Math.abs(Number(newX))){
 				$("#sound")[0].play();
 				count = 0;
 			}
 			$("#aVal").html(count1);
+			*/
 		}
 		
 	}
