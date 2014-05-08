@@ -32,9 +32,9 @@ $(document).ready(function(){
 		var newX = orgX + x;
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
+		$("#tVal").html(abs(newX));
 
 		$("#ball").css("left", Math.round(newX));
-		check();
 
 		y = Math.round(y * factor);
 
