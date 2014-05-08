@@ -16,7 +16,7 @@ $(document).ready(function(){
 			temp_x = Math.abs(Number(number1));
 			count1++;
 			count++;
-			$("#tVal").html(temp_x);
+			$("#tVal").html(a);
 			$("#cVal").html("Lose!" + count1);
 			a++;
 			$("m0").css({"-webkit-transform":"rotate("+a+"deg)"});
