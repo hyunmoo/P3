@@ -8,11 +8,12 @@ $(document).ready(function(){
 	var check = function (number1){
 		if(count === 0){
 			temp_x = Math.abs(Number(number1));
+			count1++;
 			$("#tVal").html(temp_x);
-			$("#cVal").html("Lose!");
+			$("#cVal").html("Lose!" + count1);
 		}else {
 			if( temp_x != Math.abs(Number(number1)) ){
-				$("#cVal").html("Win!");
+				$("#aVal").html("Win!" + count1++);
 				count = 0;
 			}
 		}
