@@ -12,13 +12,19 @@ $(document).ready(function(){
 	var gradient = function(number2){
 		if(Number(number2) === 155){
 			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+				$("#ssound")[0].load();
+	$("#ssound")[0].play();
 		}else if(Number(number2) < 155){
 			a--;
 			if(a < -45){
 				a= -45;
 				$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+					$("#ssound")[0].load();
+	$("#ssound")[0].play();
 			}else{
 				$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+					$("#ssound")[0].load();
+	$("#ssound")[0].play();
 			}
 		}else if(Number(number2) > 155){
 			a++;
@@ -90,8 +96,8 @@ $(document).ready(function(){
 		$("#ball").css("top", Math.round(newY));
 		
 		gradient(Number(newX));
-		$("#xVal").html(newX);
-		$("#yVal").html(newY);
+		$("#xVal").html(x);
+		$("#yVal").html(y);
 		$("#zVal").html(z);
 
 	}
