@@ -60,8 +60,8 @@ $(document).ready(function(){
 		}
 		
 		if(count === 1){
-			$("#cVal").html(count);
 			count = 0;
+			$("#cVal").html(count);
 		}
 		
 	}
