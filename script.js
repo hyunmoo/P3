@@ -63,7 +63,7 @@ $(document).ready(function(){
 		if(count === 1){
 			count = 0;
 			count1++;
-			$("#cVal").html(count1);
+			$("#aVal").html(count1);
 		}
 		
 	}
