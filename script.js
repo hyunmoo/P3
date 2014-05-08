@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	console.log("ready");	
-	
+	$("#sound")[0].play();
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
