@@ -49,7 +49,10 @@ $(document).ready(function(){
 	    var x = event.accelerationIncludingGravity.x;
 	    var y = event.accelerationIncludingGravity.y;
 	    var z = event.accelerationIncludingGravity.z;
+		gradient(Number(x));
 		
+		$("#yVal").html(y);
+		$("#zVal").html(z);		
 		var maxX = window.innerWidth - $("#ball").width();
 		var maxY = window.innerHeight - $("#ball").height();
 
