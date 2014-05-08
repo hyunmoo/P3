@@ -14,7 +14,7 @@ $(document).ready(function(){
 	var count1 = 0;
 	var a = 0;
 	var gradient = function(number2){
-		$("#xVal").html(x);
+		$("#xVal").html(number2);
 		
 		if(count1 = 0){
 			temp_g = Number(number2);
@@ -80,7 +80,7 @@ $(document).ready(function(){
 
 		$("#ball").css("top", Math.round(newY));
 		
-		gradient(Number(x));
+		gradient(Number(newX));
 		
 		$("#yVal").html(y);
 		$("#zVal").html(z);
