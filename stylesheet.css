@@ -16,12 +16,12 @@ html, body {
 	border-radius: 25px;
 }
 
-#m0{
+#im{
 	position: absolute;
 	top : 20%;
 	left: 20%;
-	
-	/*-ms-transform:rotate(30deg);  
+
+	-ms-transform:rotate(30deg);  
 	-webkit-transform:rotate(30deg);
-	transform:rotate(30deg); */
+	transform:rotate(30deg);
 }

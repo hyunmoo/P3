@@ -1,25 +1,27 @@
 $(document).ready(function(){
 	console.log("ready");	
 	document.getElementById("ssound").play();
+	
 	var temp_x = 0;
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
 	var a = 0;
+	$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
 	var gradient = function(number2){
 		
 	}
-	
+	 
 	
 	var check = function (number1){
 		if(count === 0){
 			temp_x = Math.abs(Number(number1));
 			count1++;
 			count++;
-			$("#tVal").html(a);
+			
 			$("#cVal").html("Lose!" + count1);
 			a++;
-			 $("#m0").rotate(a);
+			// $("#m0").rotate(a);
 		}else if(count === 1){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
@@ -74,6 +76,7 @@ $(document).ready(function(){
 		newY = Math.min(maxY, newY);
 
 		$("#ball").css("top", Math.round(newY));
+		$("#tVal").html(newX, newY);
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
