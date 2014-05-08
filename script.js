@@ -4,6 +4,8 @@ $(document).ready(function(){
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
+	var maxX;
+	var maxY;
 
 	function handleMotionEvent(event) {
 
@@ -17,8 +19,8 @@ $(document).ready(function(){
 		$("#yVal").html(y);
 		$("#zVal").html(z);
 
-		var maxX = window.innerWidth - $("#ball").width();
-		var maxY = window.innerHeight - $("#ball").height();
+		maxX = window.innerWidth - $("#ball").width();
+		maxY = window.innerHeight - $("#ball").height();
 
 		var factor = 3;
 
@@ -32,18 +34,8 @@ $(document).ready(function(){
 		newX = Math.min(maxX, newX);
 
 		$("#ball").css("left", Math.round(newX));
-		
-		if(count === 0){
-			temp_x = abs(newX);
-			count++;
-		}
-		
-		if(count === 1){
-			if(temp_x < abs(newX)){
-				$('#video')[0].play();
-				count = 0;
-			}
-		}
+		check();
+
 		y = Math.round(y * factor);
 
 		var orgY = $("#ball").css("top");
@@ -59,6 +51,17 @@ $(document).ready(function(){
 	window.addEventListener("devicemotion", handleMotionEvent, true);
 	
 	function check(){
+		if(count === 0){
+			temp_x = abs(newX);
+			count++;
+		}
+		
+		if(count === 1){
+			if(temp_x < abs(newX)){
+				$("#video")[0].play();
+				count = 0;
+			}
+		}
 		
 	}
 	
