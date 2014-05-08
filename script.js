@@ -1,11 +1,15 @@
 $(document).ready(function(){
 	console.log("ready");	
-	var so = document.getElementById("ssound");
 	document.getElementById("ssound").play();
-	var temp_x = 0; //
+	var temp_x = 0;
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
+	int a = 0;
+	var gradient = function(number2){
+		
+	}
+	
 	
 	var check = function (number1){
 		if(count === 0){
@@ -14,6 +18,8 @@ $(document).ready(function(){
 			count++;
 			$("#tVal").html(temp_x);
 			$("#cVal").html("Lose!" + count1);
+			a++;
+			$("m0").css({'-webkit-transform':'rotate('a'deg)';});
 		}else if(count === 1){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
@@ -54,6 +60,7 @@ $(document).ready(function(){
 		newX = Math.min(maxX, newX);
 		//$("#tVal").html(Math.abs(Number(newX)));
 		check(Number(newX));
+		
 
 		$("#ball").css("left", Math.round(newX));
 
