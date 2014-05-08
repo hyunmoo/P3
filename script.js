@@ -9,7 +9,10 @@ $(document).ready(function(){
 	var a = 0;
 	$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
 	var gradient = function(number2){
-		
+		if(Number(number2) === 155){
+			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+		}
+			
 	}
 	 
 	
@@ -17,11 +20,9 @@ $(document).ready(function(){
 		if(count === 0){
 			temp_x = Math.abs(Number(number1));
 			count1++;
-			count++;
-			
+			count++;		
 			$("#cVal").html("Lose!" + count1);
-			a++;
-			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+			
 		}else if(count === 1){
 			if( temp_x != Math.abs(Number(number1)) ){
 				count1++
@@ -71,6 +72,7 @@ $(document).ready(function(){
 
 		$("#ball").css("top", Math.round(newY));
 		
+		gradient(Number(newX));
 		$("#xVal").html(newX);
 		$("#yVal").html(newY);
 		$("#zVal").html(z);
