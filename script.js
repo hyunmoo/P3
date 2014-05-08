@@ -1,12 +1,10 @@
 $(document).ready(function(){
 	console.log("ready");	
-	$("#sound")[0].play();
+	$('#sound')[0].play();
 	var temp_x = 0; //
 	var temp_y = 0;
 	var count = 0;
 	var count1 = 0;
-	var newX;
-	var newY;
 
 	function handleMotionEvent(event) {
 
@@ -34,7 +32,7 @@ $(document).ready(function(){
 		newX = Math.max(0, newX);
 		newX = Math.min(maxX, newX);
 		//$("#tVal").html(Math.abs(Number(newX)));
-		check();
+		che(newX);
 
 		$("#ball").css("left", Math.round(newX));
 
@@ -51,25 +49,30 @@ $(document).ready(function(){
 	}
 
 	window.addEventListener("devicemotion", handleMotionEvent, true);
-	
+	function che(num1){
+		temp_x = Math.abs(Number(num1));
+		$("#tVal").html(temp_x);
+	}
+	/*
 	function check(){
 		if(count === 0){
 			temp_x = Math.abs(Number(newX));
 			count++;
 			$("#tVal").html(temp_x);
 		}else if(count === 1){
-			/*
+			
 			if(temp_x != Math.abs(Number(newX))){
 				$("#sound")[0].play();
 				count = 0;
 			}
 			$("#aVal").html(count1);
-			*/
+			
 		}
+		
 		
 	}
 	
-	
+	*/
 
 	//$("#ball").css("left", 30);
 	//$("#ball").css("top", 30);
