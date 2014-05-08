@@ -17,10 +17,12 @@ $(document).ready(function(){
 		
 		if(count1 = 0){
 			temp_g = Number(number2);
+			count1++;
 		}
 		
 		if(Number(number2) != temp_g){
 			$('#im').css({"-webkit-transform": "rotate("+a+"deg)"});
+			count = 0;
 		}
 	}
 	 
