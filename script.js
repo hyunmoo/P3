@@ -6,8 +6,17 @@ $(document).ready(function(){
 	var count = 0;
 	var count1 = 0;
 	var check = function (number1){
-		temp_x = Math.abs(Number(number1));
-		$("#tVal").html(temp_x);
+		if(count === 0){
+			temp_x = Math.abs(Number(number1));
+			$("#tVal").html(temp_x);
+			$("#cVal").html("Lose!");
+		}else {
+			if( temp_x != Math.abs(Number(number1)) ){
+				$("#cVal").html("Win!");
+				count = 0;
+			}
+		}
+
 	}
 
 	function handleMotionEvent(event) {
